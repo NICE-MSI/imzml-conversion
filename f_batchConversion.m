@@ -29,7 +29,7 @@ if strcmpi('desi',modality)
     for i = 1:size(rawToProcess)
         patName = ['"' pdmPath patToProcess(i).name '"'] %create location name of pat
         rawName = ['"' rawFilePath rawToProcess(i).name '"'] %create loaction of RAW file
-        system(['java -jar jimzMLConverter.jar imzML -p ' patName ' ' rawName]) %call imzML converter through command line
+        system(['java -jar jimzMLConverter-2.1.0.jar imzML -p ' patName ' ' rawName]) %call imzML converter through command line
         i
     end
     
@@ -59,7 +59,7 @@ if strcmpi('umaldi',modality)    % wz: this is 'umaldi'
     for i = 1:size(rawToProcess,1)
         patName = ['"' pdmPath filesep patToProcess(i).name '"']; %create location name of pat
         rawName = ['"' rawFilePath '"']; %create location of RAW file
-        system(['java -jar jimzMLConverter.jar imzML -p ' patName ' ' rawName]) %call imzML converter through command line
+        system(['java -jar jimzMLConverter-2.1.0.jar imzML -p ' patName ' ' rawName]) %call imzML converter through command line
         %i
     end
     
