@@ -4,7 +4,7 @@
 PDMAnalyserPath = 'X:\PDMAnalyser\'; % only needed for 'desi' or 'maldi'
 jimzMLConverterPath = 'C:\Users\tm6\Documents\GitHub\jimzMLConverter\target\';
 
-dataPath = 'D:\hpc - icr data\pdxs primary tumours & biopsies data\neg desi\BB35-raw files(-)\'; 
+dataPath = 'D:\icl desi data for icr study\pos desi raw\'; 
 
 raw_path = dir([ dataPath '*.raw']); % find all raw files to convert
 pdm_path = dir([ dataPath '*.pdm']); % find all related pdm files to convert
@@ -17,6 +17,6 @@ end
 pat_path = dir([ dataPath '*.pat']); % find all related pat files to convert
    
 cd(jimzMLConverterPath) % set directory to the jimzMLConverter
-for i = 2:size(raw_path,1) % 1:size(raw_path,1)
+for i =  4 % 1:size(raw_path,1)
     system(['java -jar jimzMLConverter-2.1.0.jar imzML -p ' ['"' dataPath pat_path(i).name '"'] ' ' ['"' dataPath raw_path(i).name '"']]) %call imzML converter through command line
 end
