@@ -4,7 +4,7 @@
 PDMAnalyserPath = 'X:\PDMAnalyser\'; % only needed for 'desi' or 'maldi'
 jimzMLConverterPath = 'C:\Users\tm6\Documents\GitHub\jimzMLConverter\target\';
 
-dataPath = 'X:\MSMS Imaging\MSMS\'; 
+dataPath = 'X:\Chelsea\Kidney uMALDI\'; 
 
 raw_path = dir([ dataPath '*.raw']); % find all raw files to convert
 pdm_path = dir([ dataPath '*.pdm']); % find all related pdm files to convert
